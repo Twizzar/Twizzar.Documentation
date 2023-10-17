@@ -1,4 +1,4 @@
-Welcome to the Twizzar Wiki!
+Welcome to the Twizzar Wiki! 2
 
 To get started with Twizzar, check out our [Quickstart](./quickstart) guide and the videos below.
 
