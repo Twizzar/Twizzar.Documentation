@@ -29,7 +29,7 @@ jobs:
       - name: Build with VitePress
         run: |
           yarn docs:build
-          touch docs/.vitepress/dist/.nojekyll
+          touch .vitepress/dist/.nojekyll
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
