@@ -16,7 +16,7 @@ export default defineConfig({
                 text: 'Documentation',
                 items: [
                     { text: 'Home', link: '/home' },
-                    { text: 'Quickstart', link: '/Quickstart' },
+                    { text: 'Quickstart', link: '/quickstart' },
                     { text: 'Analyser diagnostics', link: '/analyzer-diagnostics' },
                     {
                         text: 'Test creation',
@@ -29,7 +29,7 @@ export default defineConfig({
                             { text: 'UnitTest generation', link: 'testCreation/unitTest-generation' },
                         ]
                     },
-                    { text: 'Generics', link: '/Generics' }
+                    { text: 'Generics', link: '/generics' }
                 ]
             }
         ],
