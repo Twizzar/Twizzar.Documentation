@@ -7,7 +7,8 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "build:azure": "vitepress build"
   },
   "dependencies": {
     "@vue/server-renderer": "^3.3.4",
