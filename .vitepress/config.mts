@@ -16,6 +16,8 @@ export default defineConfig({
                 text: 'Documentation',
                 items: [
                     { text: 'Quickstart', link: '/quickstart' },
+                    { text: 'Requirements', link: '/requirements' },
+                    { text: 'Key bindings', link: '/key-bindings' },
                     { text: 'Analyser diagnostics', link: '/analyzer-diagnostics' },
                     {
                         text: 'Test creation',
@@ -50,6 +52,9 @@ export default defineConfig({
         ],
         search: {
             provider: 'local'
+        },
+        sitemap: {
+            hostname: 'https://docs.twizzar.com'
         }
     }
 })
