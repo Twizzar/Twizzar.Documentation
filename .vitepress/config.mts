@@ -1,44 +1,156 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Twizzar documentation",
     description: "...more than a mocking framework.",
-    srcDir: './src',
+    srcDir: "./src",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: 'Home', link: 'https://www.twizzar.com', target: '_self' },
-            { text: 'Download', link: 'https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22' },
-        ],
-        sidebar: [
+            { text: "Home", link: "https://www.twizzar.com", target: "_self" },
             {
-                text: 'Documentation',
-                items: [
-                    { text: 'Quickstart', link: '/quickstart' },
-                    { text: 'Requirements', link: '/requirements' },
-                    { text: 'Key bindings', link: '/key-bindings' },
-                    { text: 'Analyser diagnostics', link: '/analyzer-diagnostics' },
-                    {
-                        text: 'Test creation',
-                        link: 'testCreation/test-creation',
-                        items: [
-                            { text: 'Shortcuts', link: 'testCreation/shortcuts' },
-                            { text: 'Configuration', link: 'testCreation/configuration' },
-                            { text: 'Mapping', link: 'testCreation/mapping' },
-                            { text: 'Templating', link: 'testCreation/templating' },
-                            { text: 'UnitTest generation', link: 'testCreation/unitTest-generation' },
-                        ]
-                    },
-                    { text: 'Generics', link: '/generics' }
-                ]
-            }
+                text: "Download",
+                link: "https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22",
+            },
         ],
+        sidebar: {
+            "/": {
+                text: "Documentation",
+                items: [
+                    { text: "Quickstart", link: "/quickstart" },
+                    { text: "Requirements", link: "/requirements" },
+                    { text: "Key bindings", link: "/key-bindings" },
+                    {
+                        text: "Key concepts",
+                        items: [
+                            {
+                                text: "Test creation",
+                                link: "/key-concepts/test-creation",
+                            },
+                            {
+                                text: "Item Builder",
+                                link: "/key-concepts/item-builder",
+                            },
+                            {
+                                text: "Twizzar UI",
+                                link: "/key-concepts/twizzar-ui",
+                            },
+                            {
+                                text: "Basic types",
+                                link: "/key-concepts/basic-types",
+                            },
+                            {
+                                text: "Default behavior",
+                                link: "/key-concepts/default-behavior",
+                            },
+                        ],
+                    },
+                    {
+                        text: "How to...",
+                        items: [
+                            {
+                                text: "resolve more than one instance",
+                                link: "/advanced-functionality/build-many",
+                            },
+                            {
+                                text: "use dependencies in your code",
+                                link: "/advanced-functionality/context",
+                            },
+                            {
+                                text: "verify Method and Properties",
+                                link: "/advanced-functionality/verify",
+                            },
+                            {
+                                text: "setup methods and properties with delegates",
+                                link: "/advanced-functionality/method-delegates",
+                            },
+                            {
+                                text: "setup method callbacks",
+                                link: "/advanced-functionality/method-callbacks",
+                            },
+                            {
+                                text: "work with generics",
+                                link: "/advanced-functionality/generics",
+                            },
+                        ],
+                    },
+                    { text: "Api reference", link: "/api/" },
+                ],
+            },
+            "/api/": {
+                text: "API",
+                link: "/api/",
+                items: [
+                    {
+                        text: "Twizzar.Api",
+                        link: "/api/Twizzar_Api",
+                    },
+                    {
+                        text: "Twizzar.Fixture",
+                        items: [
+                            {
+                                text: "IItemBuilder",
+                                link: "api/Twizzar.Fixture/IItemBuilder-1",
+                            },
+                            {
+                                text: "ItemBuilder&lt;TFixtureItem&gt;",
+                                link: "api/Twizzar.Fixture/ItemBuilder-1",
+                            },
+                            {
+                                text: "ItemBuilder&lt;TFixtureItem,TPathProvider&gt;",
+                                link: "api/Twizzar.Fixture/ItemBuilder-2",
+                            },
+                            {
+                                text: "IItemContext",
+                                link: "api/Twizzar.Fixture/IItemContext-2",
+                            },
+                            {
+                                text: "IMemberVerifier",
+                                link: "api/Twizzar.Fixture/IMemberVerifier",
+                            },
+                            {
+                                text: "IMethodVerifier",
+                                link: "api/Twizzar.Fixture/IMethodVerifier-3",
+                            },
+                            {
+                                text: "IPropertySetOrGetVerifier",
+                                link: "api/Twizzar.Fixture/IPropertySetOrGetVerifier",
+                            },
+                            {
+                                text: "VerificationException",
+                                link: "api/Twizzar.Fixture/VerificationException",
+                            },
+                            {
+                                text: "Verify",
+                                link: "api/Twizzar.Fixture/Verify",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Twizzar.Fixture.Verifier",
+                        items: [
+                            {
+                                text: "CtorVerifierException",
+                                link: "api/Twizzar.Fixture.Verifier/CtorVerifierException",
+                            },
+                            {
+                                text: "ICtorVerifier",
+                                link: "api/Twizzar.Fixture.Verifier/ICtorVerifier-1",
+                            },
+                        ],
+                    },
+                ],
+            },
+        },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/Twizzar/Twizzar' },
-            { icon: 'twitter', link: 'https://twitter.com/twizzarsoftware' },
-            { icon: 'youtube', link: 'https://www.youtube.com/channel/UCW63OfE41BBeWKk9MlYsczA' },
+            { icon: "github", link: "https://github.com/Twizzar/Twizzar" },
+            { icon: "twitter", link: "https://twitter.com/twizzarsoftware" },
+            {
+                icon: "youtube",
+                link: "https://www.youtube.com/channel/UCW63OfE41BBeWKk9MlYsczA",
+            },
             // {
             //     icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-90 -150.00025 780 900.0015"><rect fill="#004880" ry="145.71" rx="145.71" height="485.71" width="485.71" y="114.291" x="114.29"/><circle fill="#004880" r="52.381" cy="52.381" cx="52.381"/><circle fill="#fff" r="64" cy="251.141" cx="251.14"/><circle fill="#fff" r="102.5" cy="445.621" cx="445.62"/></svg>' },
             //     link: 'https://www.nuget.org/packages/Twizzar.Api'
@@ -51,10 +163,10 @@ export default defineConfig({
             // },
         ],
         search: {
-            provider: 'local'
+            provider: "local",
         },
         sitemap: {
-            hostname: 'https://docs.twizzar.com'
-        }
-    }
-})
+            hostname: "https://docs.twizzar.com",
+        },
+    },
+});

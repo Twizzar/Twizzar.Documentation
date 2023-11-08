@@ -4,12 +4,12 @@ import DocImg from '../components/DocImg.vue'
 
 # Key bindings
 
-| Command                      | Description                                            | Key binding                                                                              |
-| ---------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| About                        | Opens the about dialog                                 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd> |
+| Command                      | Description                                             |                                         Key binding                                          |
+| ---------------------------- | ------------------------------------------------------- | :------------------------------------------------------------------------------------------: |
+| About                        | Opens the about dialog                                  | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd> |
 | Create UnitTest              | Creates a new unit test for the member under the cursor | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd> |
-| UnitTest <-> Code Navigation | Jumps either to the unit test or the member definition | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>G</kbd> |
-| Open or close                | Open or close the Twizzar UI                           | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>V</kbd> |
+| UnitTest <-> Code Navigation | Jumps either to the unit test or the member definition  | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>G</kbd> |
+| Open or close                | Open or close the Twizzar UI                            | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>V</kbd> |
 
 ## Reset shortcuts
 

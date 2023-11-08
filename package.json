@@ -2,16 +2,20 @@
   "name": "TwizzarDocu",
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
+    "glob-run": "^0.1.7",
     "vitepress": "^1.0.0-rc.14"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "build:azure": "vitepress build"
+    "build:azure": "vitepress build",
+    "mermaid": "glob-run mmdc -i src/mermaid/\\*.mmd -o src/images/\\*.svg"
   },
   "dependencies": {
     "@vue/server-renderer": "^3.3.4",
+    "sass": "^1.69.5",
+    "vitepress-plugin-auto-sidebar": "^1.1.0",
     "vue": "^3.3.4"
   }
 }
