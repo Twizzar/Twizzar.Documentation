@@ -2,8 +2,10 @@
 import DocImg from '../components/DocImg.vue'
 import VideoPlayer from '../components/VideoPlayer.vue'
 
+// image source
 import TwizzarExtensionMenu from './images/Twizzar_Extension_Menu.png';
-
+import TwizzarCreateUnitTest from './images/Twizzar_Create_Unit_Test.png';
+import TwizzarUI from './images/Twizzar_UI.png';
 </script>
 
 # Quickstart
@@ -28,7 +30,7 @@ After the installation of the extension, you can create your first test with TWI
 To use the create command, the editor cursor must be on the method signature or in the method block.
 :::
 
-<DocImg src="../images/Twizzar_Create_Unit_Test.png" alt="Create Unit Test"/>
+<DocImg :src="TwizzarCreateUnitTest" alt="Create Unit Test"/>
 
 TWIZZAR will now create a test class for you and insert the necessary code to create a test with Twizzar. If TWIZZAR cannot find the test project, it will ask if TWIZZAR should create one for you.
 
@@ -93,7 +95,7 @@ The UI and the code both use the dependency tree to select members to set up. To
 #### TWIZZAR UI
 To open the TWIZZAR UI use the arrow behind the `ItemBuilder` or use the TWIZZAR open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>). Configure the member by entering a value in the input field.
 
-<DocImg src="../images/Twizzar_UI.png" alt="Twizzar UI"/>
+<DocImg :src="TwizzarUI" alt="Twizzar UI"/>
 
 TWIZZAR will create a builder class inheriting from `new ItemBuilder<IIngredient>()`. Rename this class to something meaningful, for example, `WaterBuilder`.
 

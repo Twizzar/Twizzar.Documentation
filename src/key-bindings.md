@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import DocImg from '../components/DocImg.vue'
+
+// image source
+import TwizzarResetShortcuts from './images/Twizzar_Reset_Shortcuts.png';
+import TwizzarSetShortcuts from './images/Twizzar_Set_Shortcuts.png';
 </script>
 
 # Key bindings
@@ -15,7 +19,7 @@ import DocImg from '../components/DocImg.vue'
 
 In case you want to reset the twizzar shortcuts, you can do so by opening the about window via the main menu : `Extensions > TWIZZAR > About` or shortcut (<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>, <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>).
 
-<DocImg src="../images/Twizzar_Reset_Shortcuts.png" alt="Reset the shortcuts to the default configuration in the about window."/>
+<DocImg :src="TwizzarResetShortcuts" alt="Reset the shortcuts to the default configuration in the about window."/>
 
 On the about window you can find a button "Set default shortcut binding", in the center of the window. By clicking the button all shortcut bindings, using the twizzar key-combinations, are removed and reassigned to the twizzar commands.
 
@@ -23,4 +27,4 @@ On the about window you can find a button "Set default shortcut binding", in the
 
 Custom shortcuts for the Twizzar commands can be assigned via the build-in options window of Visual Studio: `Main Menu > Tools > Options`
 
-<DocImg src="../images/Twizzar_Set_Shortcuts.png" alt="Open the options window of Visual Studio to set the TWIZZAR shortcuts."/>
+<DocImg :src="TwizzarResetShortcuts" alt="Open the options window of Visual Studio to set the TWIZZAR shortcuts."/>

@@ -8,6 +8,10 @@ const buildUrl = `${fixtureUrl}IItemBuilder-2/Build.html`;
 const withUrl = `${fixtureUrl}ItemBuilder-2/With.html`;
 
 const memberConfigUrl = "../api/Twizzar.Fixture.Member/MemberConfig-1.html";
+
+// image source
+import TwizzarNestedFiles from '../images/Twizzar_Nested_Files.png';
+import TwizzarCustomItemBuilder from '../images/Twizzar_Custom_Item_Builder.png';
 </script>
 
 # Item Builder
@@ -85,14 +89,14 @@ The greatest constructor is defined as the constructor with the most parameters.
 When a Fixture Item is configured over the [Twizzar UI](./twizzar-ui) a new Custom Item Builder will be declared, this required the following steps:
 
 1.  A new File is generated with the postfix `.twizzar.cs` for projects with the new cproj structure, the File will be nested under the unit test.
-    <DocImg src="../images/Twizzar_Nested_Files.png" alt="Nested Files"/>
+    <DocImg :src="TwizzarNestedFiles" alt="Nested Files"/>
 2.  The unit test class will be made partial.
 3.  In the new generated file, a new partial class for the unit test class is generated
 4.  A new Custom Item Builder class is generated in the generated file.
 5.  The `new ItemBuilder<T>()` statement will be changed to `new CustomItemBuilderName()`
 6.  For the CustomItemBuilderName a unique name will be generated.
 
-<DocImg src="../images/Twizzar_Custom_Item_Builder.png" alt="Custom Item Builder"/>
+<DocImg :src="TwizzarCustomItemBuilder" alt="Custom Item Builder"/>
 
 ::: tip
 Rename the auto generated name of the Custom Item Builder with the Visual Studio refactor option to something meaning full like ManaPotionBuilder.

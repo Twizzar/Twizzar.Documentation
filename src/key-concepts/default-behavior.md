@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import DocImg from '../../components/DocImg.vue'
+
+// image source
+import TwizzarDefaultBehaviorFlow from '../images/Twizzar_Deafult_Behaviour_Flow.svg';
 </script>
 
 # Default behavior
@@ -35,4 +38,4 @@ The default behavior can be overridden by configuring the member. There are two 
 
 The configuration in the Unit Test is the strongest and will override all other, and the default behavior is the weakest.
 
-<DocImg src="../images/Twizzar_Deafult_Behaviour_Flow.svg" alt="Default behavior override flow"/>
+<DocImg :src="TwizzarDefaultBehaviorFlow" alt="Default behavior override flow"/>

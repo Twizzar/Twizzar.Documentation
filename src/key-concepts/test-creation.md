@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import DocImg from '../../components/DocImg.vue'
+
+// image source
+import TwizzarCodeEditorUnitTestGeneration from '../images/Twizzar_CodeEditor_UnitTest_Generation.png';
 </script>
 
 # Test creation
@@ -12,7 +15,7 @@ Twizzar simplifies the unit testing process in Visual Studio, enhancing producti
 ## Unit test generation
 Twizzar automatically creates a unit test for the current member, by either using the Shortcut (<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>, <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>) or context menu:
 
-<DocImg src="../images/Twizzar_CodeEditor_UnitTest_Generation.png" alt="Create Unit Test"/>
+<DocImg :src="TwizzarCodeEditorUnitTestGeneration" alt="Create Unit Test"/>
 
 Based on the [mapping](#mapping) and [template](#templating) a new project, a test class and a new test method for the member you want to test are created. Existing projects and test classes are going to be reused, if they match the [mapping](#mapping). Nuget packages or usings may be updated during the creation process.
 

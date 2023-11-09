@@ -52,6 +52,10 @@ export default defineConfig({
                         text: "How to...",
                         items: [
                             {
+                                text: "add Twizzar to an existing project",
+                                link: "/advanced-functionality/add-twizzar-to-an-existing-project",
+                            },
+                            {
                                 text: "create multiple instances of a type",
                                 link: "/advanced-functionality/build-many",
                             },
