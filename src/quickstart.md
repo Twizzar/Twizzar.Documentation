@@ -1,344 +1,129 @@
+<script setup lang="ts">
+import DocImg from '../components/DocImg.vue'
+import VideoPlayer from '../components/VideoPlayer.vue'
+
+// image source
+import TwizzarExtensionMenu from './images/Twizzar_Extension_Menu.png';
+import TwizzarCreateUnitTest from './images/Twizzar_Create_Unit_Test.png';
+import TwizzarUI from './images/Twizzar_UI.png';
+</script>
+
 # Quickstart
 
-## Requirements
-
-- Visual Studio 2022 for Windows
-- **Any .Net Version** compatible with **.Net Standard 2.0** (see compatibility list)
-
-::: details .NET Standard 2.0 compatibility list
-See also [https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0)
-
-| .NET implementation        | Version support                               |
-| -------------------------- | --------------------------------------------- |
-| .NET and .NET Core         | 2.0, 2.1, 2.2, 3.0, 3.1, 5.0, 6.0, 7.0        |
-| .NET Framework 1           | 4.6.1 2, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
-| Mono                       | 5.4, 6.4                                      |
-| Xamarin.iOS                | 10.14, 12.16                                  |
-| Xamarin.Mac                | 3.8, 5.16                                     |
-| Xamarin.Android            | 8.0, 10.0                                     |
-| Universal Windows Platform | 10.0.16299, TBD                               |
-| Unity                      | 2018.1                                        |
-
-:::
-
-## First Steps
-
-Twizzar consists of two NuGet packages and one Visual Studio Extension:
-
-1. **Twizzar API** Contains the methods used in unit tests for building up the test fixture.
-2. **Twizzar Analyzer** Generates code at compile time which is used by the Twizzar API to provide an easy-to-use selection of the dependencies for configuration.
-3. **Twizzar VsAddin** Provides a User Interface for easy configuration of the Fixtures.
-
-To run Twizzar, install the [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22) and add the [Twizzar API](https://www.nuget.org/packages/Twizzar.Api/) NuGet packages to each Unit Test project.
-
-After the [installation](#Installation), you can write your first unit test with Twizzar:
-
-```csharp
-[Test]
-public void MyFirstTest()
-{
-    // arrange
-
-    // Build a potion, or any other class or interface, with Twizzar.
-    var potion = new ItemBuilder<Potion>().Build();
-
-    // act
-    ... your act code
-
-    // assert
-    ... your arrange code
-}
-```
-
 ## Installation
+Download and install the extension from the Visual Studio Marketplace: [https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22](https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22).
 
-### NuGet
-
-The NuGet packages is available at: [https://www.nuget.org/packages/Twizzar.Api/](https://www.nuget.org/packages/Twizzar.Api/)
-
-To install the package in your unit test project, use the [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) in Visual Studio:
-
-```Powershell
-NuGet\Install-Package Twizzar.Api
-```
-
-Two packages should now be installed in Visual Studio:
-
-![image](https://user-images.githubusercontent.com/5276871/223176737-121c7c4d-3f90-4453-a3b9-2b1bf8083e98.png)
-
-::: info Note
-After installing the NuGet packages, we recommend closing all Visual Studio instances and restart them to ensure the Twizzar Analyzer which generates source code is working correctly.
-:::
-
-### Extension for Visual Studio
-
-Download the extension from the Visual Studio Marketplace: [https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22](https://marketplace.visualstudio.com/items?itemName=vi-sit.twizzar-vs22).
+After the installation, restart Visual Studio.
 The Extension should now be available under the Extension Menu:
 
-![slice1](https://user-images.githubusercontent.com/5276871/206130125-42cad2f8-7d07-4dbf-b10d-aa2f153d233a.png)
+<DocImg :src="TwizzarExtensionMenu" alt="Extensions menu"/>
 
-## Key Concepts
+## Create your first test with TWIZZAR
 
-### Item Builder
+TODO Video
 
-Twizzar uses the `ItemBuilder` class as an entry point for retrieving an instance. The ItemBuilder uses the builder pattern to provide a fluent API for configuring the dependencies of the instance requested. We call the requested instance Fixture Item in Twizzar.
+### 1. Create a new Unit Test
 
-```csharp
-using Twizzar.Fixture;
-
-// Generates a potion with the name: mana potion
-var potion = new ItemBuilder<Potion>()
-    .With(p => p.Name.Value("Mana Potion"))
-    .Build();
-```
+After the installation of the extension, you can create your first test with TWIZZAR. To do this, right-click on the method you want to test and select "Create Unit Test" from the context menu. Alternative you also can use the shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>.
 
 ::: info Note
-If you are using C#10 use global using Twizzar.Fixture; in your unit test project.
+To use the create command, the editor cursor must be on the method signature or in the method block.
 :::
 
-The `With` method can be used to configure members of the Fixture Item. The With method accepts a function which returns a `MemberConfig` to create this `MemberConfig` Twizzar provides a path class as a parameter to the function to select and then configure a member.
+<DocImg :src="TwizzarCreateUnitTest" alt="Create Unit Test"/>
 
-::: details Definition member
-In Twizzar we consider the following as a member of a class, struct, interface or record:
+TWIZZAR will now create a test class for you and insert the necessary code to create a test with Twizzar. If TWIZZAR cannot find the test project, it will ask if TWIZZAR should create one for you.
 
-- field
-- property
-- method (only available for interfaces)
-- constructor parameter
-  :::
+::: info Note
+To customize the test generation process please see [Key concepts > Test creation > Configuration](key-concepts/test-creation.html#configuration).
+:::
 
-The path class is automatically generated by the Twizzar. Analyzer with a [Source Generator](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview). Properties fields can be selected by their name, constructor parameter can be selected with `Ctor.<ParameterName>` and methods can be selected by `<MethodName>_<ReturnType>`. We call it a path class because it is possible to access members further down in the dependency tree. When a potion with an ingredient with the name "Mana Potion" as the Ingredient1 property is required as show in this tree:
+```c#:line-numbers
+using NUnit.Framework;
+using Twizzar.Fixture;
+using PotionDeliveryService.Interfaces;
+using PotionDeliveryService;
+using System;
 
-```
-Potion
-┗━ Ingredient1
-   ┗━ Name: "Mana Potion"
-```
-
-It can be selected over the path class by selecting the right path `p.Ingredient1.Name`. Or also over the constructor: `p.Ctor.ingredient1.Name`.
-
-When we look at the [Potion](https://github.com/Twizzar/Twizzar/blob/main/examples/PotionDeliveryService/PotionDeliveryService/Potions.cs), it requires four additional parameters to be created.
-
-```csharp
-public class Potion
+namespace PotionDeliveryService.Tests
 {
-    public Potion(
-        string name,
-        IIngredient ingredient1,
-        IIngredient ingredient2,
-        IEffect effect,
-        PotionColor color)
+    [TestFixture]
+    public class StorageTests
+    {
+        [Test]
+        [TestSource(nameof(Storage.Store))]
+        public void Store_Scenario_ExpectedBehavior()
         {
-            ...
+            // Arrange
+            var sut = new ItemBuilder<Storage>().Build();
+            var ingredient = new ItemBuilder<IIngredient>().Build();
+
+            // Act
+            sut.Store(ingredient);
+
+            // Assert
+            Assert.Fail();
         }
+    }
 }
 ```
 
-But we only configured the name. Twizzar provides for all not configured members a [default behavior](./default-behavior), for example for a string a unique value will be used and for an interface a mock object will be used. For classes or structs, the greatest constructor will be used and all its parameter will be resolved with the default behavior.
+TWIZZAR creates an arrange block (Line 17-18) for you, the `sut` on line 17 is the System Under Test, this is the class which is tested. The `ingredient` on line 18 is the parameter of the method which is tested. They all use the `ItemBuilder` to create a new instance of the type. The `ItemBuilder` is a class of the TWIZZAR API it is used to create a new instance of a type and configure it. For more information about the `ItemBuilder` see [Item Builder](./key-concepts/item-builder.html).
 
-::: details Definition of the greatest constructor
-The greatest constructor is defined as the constructor with the most parameters. When there are more than one constructor with max parameters, then one is selected over a hash function by Twizzar. The selection is arbitrary but deterministic. This always means the same constructor is selected.
-:::
+In the act block (Line 21), the method which is tested is called with the parameters created in the arrange block.
 
-### Twizzar UI
+The assert block (Line 24) only has a fail condition, this is because TWIZZAR does not know what should be asserted.
 
-For easy configuration, the Twizzar UI can be used. To open it use the arrow behind the ItemBuilder or use the Twizzar open/close shortcut (<kbd>Ctrl</kbd> + <kbd>T</kbd>, <kbd>Ctrl</kbd> + <kbd>T</kbd>).
+### 2. Rename the test
+Twizzar generates a placeholder name for the unit test, this name should be changed to a meaningful name.
 
-![image](https://user-images.githubusercontent.com/5276871/206156959-e5606dea-096d-4538-9804-428fa1a98364.png)
+```c#:line-numbers=11{4}
+⋯
+[Test]
+[TestSource(nameof(Storage.Store))]
+public void Store_OnStore_IngredientIsAvailable()
+⋯
+```
 
-The Twizzar UI has three columns.
-![image](https://user-images.githubusercontent.com/5276871/206154612-efe200ed-e405-4ba2-b5e9-91298eb6e276.png)
-The Twizzar UI shows all configurable members in the first column, an input field to configure the members in the second column and the type of the member in the third column. To navigate the UI, use the arrow keys and open or close sub member by the Twizzar open/close shortcut (<kbd>Ctrl</kbd> + <kbd>T</kbd>, <kbd>Ctrl</kbd> + <kbd>T</kbd>). To close the UI press <kbd>ESC</kbd>.
-
-To configure a [basic type](./basic-types), a value can be entered:
-
-- for string, enter the text surrounded by `"` ("Mana Potion")
-- for char enter a character surrounded by `'` ('a')
-- for numeric types, simply enter a number (5.6)
-- for enums type the enum class and then the enum value separated by a `.` (`PotionColor.Blue`)
-
-![image](https://user-images.githubusercontent.com/5276871/206160880-85ed004e-459f-48b4-b75e-0250ad0d9452.png)
-
-Non-basic type can be expanded, and their member can be configured directly.
-![image](https://user-images.githubusercontent.com/5276871/206161545-8d6df286-5eb8-449d-82b1-2757a87408e9.png)
-
-It is also possible to change the resolved type, by opening the autocomplete with <kbd>CTRL</kbd> + <kbd>Space</kbd> and selecting a different type.
-![image](https://user-images.githubusercontent.com/5276871/206161395-747e7b38-277e-4816-96ae-5d44da03169a.png)
-
-### Custom Item Builder
-
-When a Fixture Item is configured over the Twizzar UI a new Custom Item Builder will be declared, this required the following steps:
-
-1.  A new File is generated with the postfix `.twizzar.cs` for projects with the new cproj structure, the File will be nested under the unit test.
-    ![image](https://user-images.githubusercontent.com/5276871/206185559-576bae68-33fb-49d3-a037-8ff5e748e0a8.png)
-2.  The unit test class will be made partial.
-3.  In the new generated file, a new partial class for the unit test class is generated
-4.  A new Custom Item Builder class is generated in the generated file.
-5.  The `new ItemBuilder<T>()` statement will be changed to `new CustomItemBuilderName()`
-6.  For the CustomItemBuilderName a unique name will be generated.
-
-![NestedFiles](https://user-images.githubusercontent.com/5276871/206193551-2a5114f8-dcea-4b7c-b96d-7f325f1b818b.png)
+### 3. Setup the System Under Test
+The `ItemBuilder` class of TWIZZAR uses the builder pattern to set up an instance. It can be configured with the TWIZZAR UI or by code. 
 
 ::: info Note
-Rename the autogenerated name of the Custom Item Builder with the Visual Studio refactor option to something meaning full like ManaPotionBuilder.
+The UI and the code both use the dependency tree to select members to set up. To learn more about the dependency tree see [ItemBuilder > Dependency Tree](./key-concepts/item-builder.html#dependency-tree).
 :::
 
-When further configurations are made, then they will be added to the Custom Item Builder constructor body. It is also possible to write your own code into the Custom Item Builder if desired. The generated Custom Item Builder are generated to only be visible by the unit test where they were generated. It is also possible to move them as desired. The Twizzar UI will work regardless of the location of the Custom Item Builder as long as the type is discoverable by the unit test.
+#### TWIZZAR UI
+To open the TWIZZAR UI use the arrow behind the `ItemBuilder` or use the TWIZZAR open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>). Configure the member by entering a value in the input field.
+
+<DocImg :src="TwizzarUI" alt="Twizzar UI"/>
+
+TWIZZAR will create a builder class inheriting from `new ItemBuilder<IIngredient>()`. Rename this class to something meaningful, for example, `WaterBuilder`.
+
+#### Configure by code
+To configure the `ItemBuilder` by code, use the `With` method. The `With` method accepts a function which returns a `MemberConfig` to create this `MemberConfig` Twizzar provides a path class as a parameter to the function to select and then configure a member.
+```c#{2}
+var ingredient = new ItemBuilder<IIngredient>()
+    .With(p => p.Name.Value("Water"))
+    .Build();
+```
+
+### 4. Assert the test
+To finish the test we can now write the assertion.
+
+```c#{3}
+⋯
+// Assert
+Assert.IsTrue(sut.CheckAvailable(ingredient.Name));
+```
+
+::: info Note
+TWIZZAR provides a `Verify` method for method or property verification. For more information see [Verify](./advanced-functionality/verify.html).
+:::
+
+### 5. Run the test
+
+The test can now be run with the standard Visual Studio test runner or any other test runner of your choice. This was all needed for this test to run successfully.
 
 ## Examples
 
 An example project can be found under [examples/PotionDeliveryService](https://github.com/Twizzar/Twizzar/tree/main/examples/PotionDeliveryService), this is a good starting point to get familiar with Twizzar.
-
-## Advanced Functionality
-
-### Build Many
-
-If many unique instances are needed of a specific type, the `BuildMany(int count)` Method of the `ItemBuilder` can be used to get more than one instance. It is important to note that for each item a new object is created and configurations set to unique also get resolved with different vales for each item.
-
-```csharp
-// resolves the asked configuration n times:
-var potions = new ItemBuilder<Potion>().BuildMany(5);
-Assert.That(potions, Has.Count.EqualTo(5));
-Assert.That(potions, Is.Unique);
-
-// same can be done with specific custom builder:
-var bluePotions = new BluePotionBuilder().BuildMany(50);
-Assert.That(bluePotions, Has.Count.EqualTo(50));
-Assert.That(bluePotions, Is.Unique);
-```
-
-### Item Context
-
-Consider the following service:
-
-```csharp
-public class Consumer{
-  private readonly IEffect _effect;
-
-  public Consumer(IEffect effect){
-    _effect = effect;
-  }
-
-  public void Apply(){
-    _effect.Apply(this);
-  }
-}
-```
-
-When we now want to validate if the `Apply` method of the `IEffect` interface is called, we need access to the effect object.
-
-To validate that the `Apply` method is called, the `ItemContext` can be used. The context can be used to get dependencies which are resolved and set by the ItemBuilder. But also for validating if a method was called.
-
-```csharp
-var consumer = new MyConsumerBuilder()
-    .With(p => p.Ctor.effect.Stub<IEffect>())
-    .Build(out var context);
-
-consumer.Apply();
-
-// to verify that the Apply method is called we select the Apply method.
-// and the verify it with the Called method.
-context.Verify(p => p.Ctor.effect.Apply)
-    .Called();
-```
-
-::: info Note
-The context can only be retrieved form a custom ItemBuilder.
-:::
-
-It is also possible to validate if a method is called with the right parameter. For this, Twizzar provides methods which get automatically generated.
-
-```csharp
-public interface IStorage
-{
-    void Store(IIngredient ingredient);
-    IIngredient Take(string ingredientName);
-}
-
-var storage = new MyIStorageBuilder()
-    .Build(out var context);
-
-// To verify IStorage.Take is called where the ingredientName is MyPotion
-context.Verify(p => p.Take)
-    .WhereIngredientNameIs("MyPotion")
-    .Called();
-
-// It is also possible to use a predicate to check for parameters
-// here we check if the IStorage.Store method was called and the ingredient provided has the Name Mushroom.
-context.Verify(p => p.Store)
-    .WhereIngredientIs(ingredient => ingredient.Name == "Mushroom");
-
-// If we setup the IStorage.Take method to return an specific ingredient, and the want to check if IStorage.Store is called and the setuped ingredient was provided as parameter we could do the following:
-var ingredient = context.Get(p => p.Take);
-context.Verify(p => p.Store)
-    .WhereIngredientIs(ingredient)
-    .Called();
-
-// But Twizzar also provides a Verify which can handle this in one statement.
-context.Verify(p => p.Store)
-    .WhereIngredientIs(p => p.Take)
-    .Called();
-```
-
-To get a dependency, the Get method of the context can be used.
-
-```csharp
-var potion = new BluePotionBuilder()
-    .Build(out var context);
-
-var potionColor = context.Get(p => p.Color);
-Assert.That(potionColor, Is.EqualTo(potion.Color));
-```
-
-### Setup methods and properties with delegates
-
-It is possible to provide a delegate instead of a literal to a method or property of an interface. The delegate will be called every time the member is invoked.
-
-```csharp
-// methods
-public interface IStorage
-{
-    bool CheckAvailable(string ingredientName);
-}
-
-var storage = new ItemBuilder<IStorage>()
-    .With(p => p.CheckAvailable.Value(name => name.Contains("Potion")))
-    .Build();
-
-// this returns false
-storage.CheckAvailable("Water");
-
-// this returns true
-storage.CheckAvailable("Mana Potion");
-
-// properties
-public interface IIngredient
-{
-    string Name { get; }
-}
-
-var counter = 0;
-var ingredient = new ItemBuilder<IIngredient>()
-    .With(p => p.Name.Value(() => $"Ingredient{counter++}"))
-    .Build();
-
-_ = ingredient.Name; // Ingredient0
-_ = ingredient.Name; // Ingredient1
-```
-
-### Method callbacks
-
-For methods of an interface it is also possible to provide a callback delegate.
-
-```csharp
-public interface IStorage
-{
-    bool CheckAvailable(string ingredientName);
-}
-
-var storage = new ItemBuilder<IStorage>()
-    .With(p => p.CheckAvailable.Callback(name => Console.WriteLine(name)))
-    // it is also possible to provide a return value and a callback
-    .With(p => p.CheckAvailable.Value(true))
-    .Build();
-```

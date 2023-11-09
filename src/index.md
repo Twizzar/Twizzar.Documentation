@@ -1,36 +1,34 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
+<script setup lang="ts">
+import YoutubePlayer from '../components/YoutubePlayer.vue'
+</script>
 
-hero:
-  name: "Twizzar"
-  text: "more than a mocking framework"
-  tagline: "TWIZZAR is a toolkit for Visual Studio that helps C# developers to ease the development experience of writing highly maintainable tests."
-  image:
-    src: images/TwizzarSquared.png
-    alt: VitePress
-  actions:
-    - theme: brand
-      text: Get Started
-      link: /home
-    - theme: alt
-      text: Get it now
-      link: https://www.twizzar.com
+# TWIZZAR Documentation
 
-features:
-  - icon:
-      src: images/icons/clock.svg
-    title: Saves time when working with complex test setups
-  - icon:
-      src: images/icons/check.svg
-    title: Easy to use thanks to its intuitive UI and lean API
-  - icon:
-      src: images/icons/functionRising.svg
-    title: Enhances efficiency of developing maintainable tests
-  - icon:
-      src: images/icons/puzzle.svg
-    title: Seamlessly integrated into Visual Studio
-  - icon:
-      src: images/icons/todo.svg
-    title: Automatic detection and generation of dependencies
----
+Welcome to the Twizzar Documentation!
+
+To get started with Twizzar, check out our [Quickstart](./quickstart) guide and the videos below.
+
+## Introduction videos
+
+### Installation a quick start
+
+In this video we would like to give you a quick start with Twizzar. From the installation to the first unit test.
+
+<YoutubePlayer url="https://www.youtube.com/embed/1cofloA_DoM?si=g3G_qdweOF09fDel" />
+
+To use Twizzar, you need the Visual Studio Extension and two NuGet packages, which must be installed in your unit test projects.
+
+- Download the Extension from the Visual Studio Marketplace: https://twizzar.com/vs-addin
+- The NuGet packages are available at: https://twizzar.com/nuget
+
+### Arrange and Act
+
+In this video we would like to give you a brief introduction to the Twizzar testing toolkit. In particular, we will look at the test setup and the Arrange section.
+
+<YoutubePlayer url="https://www.youtube.com/embed/7DsTS2PLP3w?si=ktRmh9rfPPFY_ruS" />
+
+## More links
+
+- Twizzar Website [https://www.twizzar.com/](https://www.twizzar.com/).
+- Visual Studio Marketplace: https://twizzar.com/vs-addin
+- NuGet packages: https://twizzar.com/nuget
