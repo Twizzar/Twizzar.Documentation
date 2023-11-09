@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import DocImg from '../components/DocImg.vue'
 import VideoPlayer from '../components/VideoPlayer.vue'
+
+import TwizzarExtensionMenu from './images/Twizzar_Extension_Menu.png';
+
 </script>
 
 # Quickstart
@@ -11,7 +14,7 @@ Download and install the extension from the Visual Studio Marketplace: [https://
 After the installation, restart Visual Studio.
 The Extension should now be available under the Extension Menu:
 
-<DocImg src="../images/Twizzar_Extension_Menu.png" alt="Extensions menu"/>
+<DocImg :src="TwizzarExtensionMenu" alt="Extensions menu"/>
 
 ## Create your first test with TWIZZAR
 
