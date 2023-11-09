@@ -50,7 +50,7 @@ export default defineConfig({
                         text: "How to...",
                         items: [
                             {
-                                text: "resolve more than one instance",
+                                text: "create multiple instances of a type",
                                 link: "/advanced-functionality/build-many",
                             },
                             {
@@ -114,6 +114,10 @@ export default defineConfig({
                                 link: "api/Twizzar.Fixture/IMethodVerifier-3",
                             },
                             {
+                                text: "IPropertyVerifier",
+                                link: "api/Twizzar.Fixture/IPropertyVerifier-1",
+                            },
+                            {
                                 text: "IPropertySetOrGetVerifier",
                                 link: "api/Twizzar.Fixture/IPropertySetOrGetVerifier",
                             },
@@ -139,6 +143,10 @@ export default defineConfig({
                                 link: "api/Twizzar.Fixture.Verifier/ICtorVerifier-1",
                             },
                         ],
+                    },
+                    {
+                        text: "Docs",
+                        link: "/",
                     },
                 ],
             },

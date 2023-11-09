@@ -2,9 +2,9 @@
 outline: deep
 ---
 
-# Generics
+# How to work with generics
 
-This section explains the advanced features of Twizzar for handling generic methods in C#. With Twizzar, you can easily configure, mock, and verify the behavior of generic methods in your unit tests. This feature allows you to set up method responses for different type parameters, specify delegates for method calls, add callbacks, and perform verifications. This section will guide you through the process of using Twizzar to work with generic methods effectively.
+With Twizzar, you can easily configure, mock, and verify the behavior of generic methods in your unit tests. This feature allows you to set up method responses for different type parameters, specify delegates for method calls, add callbacks, and perform verifications. This section will guide you through the process of using Twizzar to work with generic methods effectively.
 
 ## Setting Up Generic Methods
 
@@ -137,7 +137,3 @@ public void Verify_parameter()
 ```
 
 The `WhereItemsIs` method now takes not only a predicate but also a type parameter. This addition is essential because Twizzar distinguishes between methods with different type arguments. Meanwhile, the Called(1) method confirms that the `CreateList<T>()` method was invoked once.
-
-## Conclusion
-
-Twizzar's advanced features for handling generic methods in C# unit testing provide powerful capabilities for customizing, mocking, and verifying the behavior of these methods. With Twizzar, you can confidently test code that relies on generic methods with ease and precision.

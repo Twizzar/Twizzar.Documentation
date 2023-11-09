@@ -2,8 +2,10 @@
 
 It is possible to provide a delegate instead of a literal to a method or property of an interface. The delegate will be called every time the member is invoked.
 
-```csharp
-// methods
+## Methods
+For methods TWIZZAR automatically generates a `Value` method which accepts a function as a parameter. The function must return a value of the same type as the method and has the method parameters as its parameters.
+
+```c#{8}
 public interface IStorage
 {
     bool CheckAvailable(string ingredientName);
@@ -18,8 +20,12 @@ storage.CheckAvailable("Water");
 
 // this returns true
 storage.CheckAvailable("Mana Potion");
+```
 
-// properties
+## Properties
+For properties TWIZZAR automatically generates a `Value` method which accepts a function as a parameter. The function must return a value of the same type as the property and always has no parameters.
+
+```c#{8}
 public interface IIngredient
 {
     string Name { get; }

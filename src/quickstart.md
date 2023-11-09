@@ -63,7 +63,7 @@ namespace PotionDeliveryService.Tests
 }
 ```
 
-TWIZZAR creates an arrange block (Line 17-18) for you, the `sut` on line 17 is the System Under Test, this is the class which is tested. The `ingredient` on line 18 is the parameter of the method which is tested. They all use the `ItemBuilder` to create a new instance of the type. The `ItemBuilder` is a class of the TWIZZARD API it is used to create a new instance of a type and configure it. For more information about the `ItemBuilder` see [Item Builder](./key-concepts/item-builder.html).
+TWIZZAR creates an arrange block (Line 17-18) for you, the `sut` on line 17 is the System Under Test, this is the class which is tested. The `ingredient` on line 18 is the parameter of the method which is tested. They all use the `ItemBuilder` to create a new instance of the type. The `ItemBuilder` is a class of the TWIZZAR API it is used to create a new instance of a type and configure it. For more information about the `ItemBuilder` see [Item Builder](./key-concepts/item-builder.html).
 
 In the act block (Line 21), the method which is tested is called with the parameters created in the arrange block.
 

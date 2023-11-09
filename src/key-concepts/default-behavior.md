@@ -4,7 +4,9 @@ import DocImg from '../../components/DocImg.vue'
 
 # Default behavior
 
-If a member is not configured, the default behavior will be applied. The default behavior is defined different for the requested type:
+If a member is required not configured, the default behavior will be applied. Required member are all constructor parameters. Other members are not configured in TWIZZAR we call this state `undefined`.
+
+The default behavior is defined different for the requested type:
 
 ## Basic types
 

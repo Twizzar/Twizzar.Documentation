@@ -2,7 +2,9 @@
 import YoutubePlayer from '../components/YoutubePlayer.vue'
 </script>
 
-Welcome to the Twizzar Wiki!
+# TWIZZAR Documentation
+
+Welcome to the Twizzar Documentation!
 
 To get started with Twizzar, check out our [Quickstart](./quickstart) guide and the videos below.
 
