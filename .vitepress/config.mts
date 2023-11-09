@@ -5,7 +5,9 @@ export default defineConfig({
     title: "Twizzar documentation",
     description: "...more than a mocking framework.",
     srcDir: "./src",
+    head: [['link', { rel: 'icon', href: '/images/TwizzarFav.png' }]],
     themeConfig: {
+        logo: "images/TwizzarSquared.png",
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: "Home", link: "https://www.twizzar.com", target: "_self" },
