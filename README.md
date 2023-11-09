@@ -1,6 +1,14 @@
 # Twizzar Documentation
 
-[[toc]]
+- [Twizzar Documentation](#twizzar-documentation)
+  - [Requirements](#requirements)
+  - [Get started](#get-started)
+  - [VitePress](#vitepress)
+  - [mermaid diagrams](#mermaid-diagrams)
+  - [Api documentation](#api-documentation)
+  - [How do I change the left side bar?](#how-do-i-change-the-left-side-bar)
+  - [Where do I put the images?](#where-do-i-put-the-images)
+  - [How do I add a video?](#how-do-i-add-a-video)
 
 ## Requirements
 - [Node.js](https://nodejs.org/en/) >= 19.0.0
@@ -59,3 +67,18 @@ The `DocImg` is a component which is used to display the images. It is located i
 Images used for the theme should be places under `src/public/images` all files in the public folder will be copied to the root of the build folder.
 
 ## How do I add a video?
+**Youtube**
+```md
+<script setup lang="ts">
+import YoutubeVideo from '../components/YoutubeVideo.vue'
+</script>
+
+<YoutubeVideo url="https://www.youtube.com/embed/<id>"/>
+```
+** Local **
+```md
+<script setup lang="ts">
+import VideoPlayer from '../components/VideoPlayer.vue'
+</script>
+
+

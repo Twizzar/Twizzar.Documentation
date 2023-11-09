@@ -104,7 +104,7 @@ export default defineConfig({
                                 link: "api/Twizzar.Fixture/ItemBuilder-1",
                             },
                             {
-                                text: "ItemBuilder&lt;TFixtureItem,TPathProvider&gt;",
+                                text: "ItemBuilder&lt;TFixtureItem, TPathProvider&gt;",
                                 link: "api/Twizzar.Fixture/ItemBuilder-2",
                             },
                             {

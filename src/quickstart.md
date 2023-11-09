@@ -20,8 +20,6 @@ The Extension should now be available under the Extension Menu:
 
 ## Create your first test with TWIZZAR
 
-TODO Video
-
 ### 1. Create a new Unit Test
 
 After the installation of the extension, you can create your first test with TWIZZAR. To do this, right-click on the method you want to test and select "Create Unit Test" from the context menu. Alternative you also can use the shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>.

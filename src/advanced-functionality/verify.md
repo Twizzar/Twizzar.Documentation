@@ -2,10 +2,10 @@
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 
-const itemContextUrl = `${fixtureUrl}/IItemContext-2`;
+const itemContextUrl = `${fixtureUrl}IItemContext-2`;
 const memberVerifierUrl = `${fixtureUrl}IMemberVerifier`;
 
-const verifyMethodUrl = `${fixtureUrl}/IItemContext-2/Verify.html#iitemcontext-tfixtureitem-tpathprovider-verify-tmethodmemberpath-method-2-of-2`;
+const verifyMethodUrl = `${fixtureUrl}IItemContext-2/Verify.html#iitemcontext-tfixtureitem-tpathprovider-verify-tmethodmemberpath-method-2-of-2`;
 const verifyPropUrl = `${fixtureUrl}/IItemContext-2/Verify`;
 
 const calledUrl = `${fixtureUrl}IMemberVerifier/Called`;
