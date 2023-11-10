@@ -81,7 +81,7 @@ export default defineConfig({
                             },
                         ],
                     },
-                    { text: "Api reference", link: "/api/" },
+                    { text: "API Documentation", link: "/api/" },
                 ],
             },
             "/api/": {
@@ -151,7 +151,7 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: "Docs",
+                        text: "User Guide",
                         link: "/",
                     },
                 ],
