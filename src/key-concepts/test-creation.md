@@ -122,7 +122,7 @@ NUnit
 NUnit3TestAdapter
 ```
 
-## Examples
+### Examples
 
 Example templates are located in the example source:
 
@@ -168,7 +168,7 @@ The file _(twizzar.template)_ serves as a template for generating the content of
 
 This code template is designed to help you create unit tests in C# using Twizzar. It includes placeholders for various parts of a unit test, such as the test namespace, test class, test method, and the necessary using statements. Nuget packages to import are specified in [Mapping > Additional Configurations](#additional-configurations). Dynamic tags are provided to handle different scenarios, such as arranging objects and invoking methods or properties. Customize this template by replacing the placeholders with your specific code and test logic to efficiently create unit tests for your C# codebase.
 
-## Examples
+### Examples
 
 Example templates are located in the example source:
 

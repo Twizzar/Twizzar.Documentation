@@ -2,7 +2,7 @@
 
 To create more than one instance of a certain type, use the `BuildMany(int count)` method of the [ItemBuilder](../api/Twizzar.Fixture/IItemBuilder-1.html) class. This method returns a collection of new objects of the specified type, each with different values for the unique configurations.
 
-```csharp
+```c#
 // creates n instances of the given type:
 var potions = new ItemBuilder<Potion>().BuildMany(5);
 Assert.That(potions, Has.Count.EqualTo(5));

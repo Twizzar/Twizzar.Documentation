@@ -10,7 +10,7 @@ With Twizzar, you can easily configure, mock, and verify the behavior of generic
 
 You can configure generic methods using Twizzar to return specific values for different type parameters. Here's how it works:
 
-```csharp
+```c#
 [Test]
 public void Setup_method_with_a_typeParameter_as_return_type()
 {
@@ -26,7 +26,7 @@ public void Setup_method_with_a_typeParameter_as_return_type()
 
 With the IGenericExample interface defined as follows:
 
-```csharp
+```c#
 interface IGenericExample
 {
     T SimpleGenericMethod<T>();
@@ -39,7 +39,7 @@ In this example, the `SimpleGenericMethod<T>()` method is set up to return `5` w
 
 To differentiate between methods with the same name but different type parameters, Twizzar appends type parameter names to the method name. Here's an example:
 
-```csharp
+```c#
 [Test]
 public void Naming_of_generic_methods()
 {
@@ -57,7 +57,7 @@ public void Naming_of_generic_methods()
 
 With the IGenericExample interface defined as follows:
 
-```csharp
+```c#
 interface IGenericExample
 {
     int MyMethod();
@@ -72,7 +72,7 @@ In this case, `MyMethod()` becomes `MyMethod`, `MyMethod<T>` becomes `MyMethodT`
 
 Twizzar allows you to assign delegates to generic methods for custom behavior. Here's an example of setting up a delegate for `CreateList<T>()`:
 
-```csharp
+```c#
 [Test]
 public void Setup_value_delegate()
 {
@@ -89,7 +89,7 @@ public void Setup_value_delegate()
 
 The CreateList method is defined as follows:
 
-```csharp
+```c#
 IList<T> CreateList<T>(params T[] items);
 ```
 
@@ -99,7 +99,7 @@ In this example, the `CreateList<T>()` method is configured to use a custom dele
 
 You can add callbacks to generic methods to capture their input parameters and perform custom actions. Here's an example of setting up a callback for `CreateList<T>()`:
 
-```csharp
+```c#
 [Test]
 public void Setup_a_callback()
 {
@@ -121,7 +121,7 @@ In this case, a callback is used to add the input parameters of the `CreateList<
 
 Twizzar allows you to verify the usage of parameters in generic methods. Here's an example of verifying parameter usage for the `CreateList<T>()` method:
 
-```csharp
+```c#
 [Test]
 public void Verify_parameter()
 {

@@ -81,7 +81,7 @@ export default defineConfig({
                             },
                         ],
                     },
-                    { text: "Api reference", link: "/api/" },
+                    { text: "API Documentation", link: "/api/" },
                 ],
             },
             "/api/": {
@@ -104,7 +104,7 @@ export default defineConfig({
                                 link: "api/Twizzar.Fixture/ItemBuilder-1",
                             },
                             {
-                                text: "ItemBuilder&lt;TFixtureItem,TPathProvider&gt;",
+                                text: "ItemBuilder&lt;TFixtureItem, TPathProvider&gt;",
                                 link: "api/Twizzar.Fixture/ItemBuilder-2",
                             },
                             {
@@ -151,7 +151,7 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: "Docs",
+                        text: "User Guide",
                         link: "/",
                     },
                 ],

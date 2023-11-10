@@ -4,7 +4,7 @@ import DocImg from '../../components/DocImg.vue'
 const fixtureUrl = "../api/Twizzar.Fixture/";
 
 const itemBuilderUrl = `${fixtureUrl}ItemBuilder-2.html`;
-const buildUrl = `${fixtureUrl}IItemBuilder-2/Build.html`;
+const buildUrl = `${fixtureUrl}ItemBuilder-2/Build.html`;
 const withUrl = `${fixtureUrl}ItemBuilder-2/With.html`;
 
 const memberConfigUrl = "../api/Twizzar.Fixture.Member/MemberConfig-1.html";
@@ -15,7 +15,7 @@ import TwizzarCustomItemBuilder from '../images/Twizzar_Custom_Item_Builder.png'
 </script>
 
 # Item Builder
-The <a :href="itemBuilderUrl">ItemBuilder</a> is the entry point for configuring a Fixture Item. The <a :href="itemBuilderUrl">temBuilder</a> uses the builder pattern to provide a fluent API for configuring the dependencies of the instance requested. We call the requested instance Fixture Item in Twizzar.
+The <a :href="itemBuilderUrl">ItemBuilder</a> is the entry point for configuring a Fixture Item. The <a :href="itemBuilderUrl">ItemBuilder</a> uses the builder pattern to provide a fluent API for configuring the dependencies of the instance requested. We call the requested instance Fixture Item in Twizzar.
 
 ## Builder pattern
 To get an instance of a type with TWIZZAR the `ItemBuilder` can be used:

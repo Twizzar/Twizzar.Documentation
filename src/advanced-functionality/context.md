@@ -16,7 +16,7 @@ var potion = new BluePotionBuilder()
 
 To get a dependency, the <a :href="getUrl">`Get`</a> method of the context can be used.
 
-```csharp
+```c#
 var potionColor = context.Get(p => p.Color);
 Assert.That(potionColor, Is.EqualTo(potion.Color));
 ```
