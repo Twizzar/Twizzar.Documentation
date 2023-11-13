@@ -8,12 +8,7 @@ import type {
 import { Stage, Player } from "@motion-canvas/core";
 import { defineProps, onMounted, ref } from "vue";
 
-const props = defineProps({
-    src: {
-        type: String,
-        required: true,
-    },
-});
+const props = defineProps<{ project: Project }>();
 
 const stage = new Stage();
 const player = ref<Player>();
@@ -23,36 +18,20 @@ const slides = ref<Slide[] | undefined>(undefined);
 const currentSlide = ref<Slide | null>();
 
 onMounted(() => {
-    loadProject(props.src).then((project) => {
-        if (!project) return;
-        player.value = initPlayer(project);
-        updateSettings();
-        play();
-    });
+    const project = props.project;
+    initProject(project);
+    player.value = initPlayer(project);
+    updateSettings();
+    play();
 });
 
-const loadProject = async (source: string) => {
+const initProject = async (project: Project) => {
     const canvas = stage.finalBuffer;
     canvas.classList.add("canvas");
     canvasContainer.value?.appendChild(canvas);
     const ro = new ResizeObserver(updateSettings);
     ro.observe(canvasContainer.value!);
-
-    let project: Project;
-    try {
-        const promise = import(
-            /* webpackIgnore: true */ /* @vite-ignore */ source
-        );
-        const delay = new Promise((resolve) => setTimeout(resolve, 200));
-        await Promise.any([delay, promise]);
-        project = (await promise).default;
-    } catch (e) {
-        console.error(e);
-        return;
-    }
-
     defaultSettings.value = project.meta.getFullRenderingSettings();
-    return project;
 };
 
 const onRender = async () => {

@@ -5,8 +5,10 @@ import DocImg from '../../components/DocImg.vue'
 
 // see https://vitepress.dev/guide/ssr-compat
 const Animation = defineClientComponent(() => {
-  return import('../../components/Animation.vue')
+    return import('../../components/Animation.vue')
 });
+
+import dependencyAnimation from '/animations/dependecy-animation.js?url';
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 
@@ -112,7 +114,7 @@ class Ingredient {
 
 To configure the Name member we use the path: `Ingredient1.Name`. This means we select the Ingredient1 member and then the Name member. The dependency tree looks like this:
 <ClientOnly>
-<Animation src="/animations/dependecy-animation.js"/>
+    <Animation :project="dependencyAnimation"/>
 </ClientOnly>
 
 ## Custom Item Builder
