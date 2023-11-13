@@ -117,6 +117,10 @@ To configure the Name member we use the path: `Ingredient1.Name`. This means we 
     <Animation :project="dependencyAnimation"/>
 </ClientOnly>
 
+::: info
+To show the different layers of the dependency tree, click the buttons above.
+:::
+
 ## Custom Item Builder
 
 When a Fixture Item is configured over the [Twizzar UI](./twizzar-ui) a new Custom Item Builder will be declared, this required the following steps:
