@@ -8,7 +8,7 @@ const Animation = defineClientComponent(() => {
     return import('../../components/Animation.vue')
 });
 
-import dependencyAnimation from '/animations/dependecy-animation.js?url';
+import dependencyAnimation from '../animations/dependecy-animation.js?url';
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 

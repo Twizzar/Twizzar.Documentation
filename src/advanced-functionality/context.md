@@ -2,7 +2,7 @@
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 const itemContextUrl = `${fixtureUrl}IItemContext-2`;
-const buildContextUrl = `${fixtureUrl}IItemBuilder-2/Build`;
+const buildContextUrl = `${fixtureUrl}ItemBuilder-2/Build`;
 const getUrl = `${fixtureUrl}IItemContext-2/Get`;
 </script>
 
