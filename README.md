@@ -4,7 +4,7 @@
   - [Requirements](#requirements)
   - [Get started](#get-started)
   - [VitePress](#vitepress)
-  - [mermaid diagrams](#mermaid-diagrams)
+  - [Mermaid diagrams](#mermaid-diagrams)
   - [Api documentation](#api-documentation)
   - [How do I change the left side bar?](#how-do-i-change-the-left-side-bar)
   - [Where do I put the images?](#where-do-i-put-the-images)
@@ -26,7 +26,7 @@ yarn docs:dev
 The documentation is build with VitePress. For more information see:
 [https://vitepress.dev/guide/getting-started](https://vitepress.dev/guide/getting-started)
 
-## mermaid diagrams
+## Mermaid diagrams
 
 To generate mermaid diagrams install mermaid cli
 ```bash
@@ -75,7 +75,7 @@ import YoutubeVideo from '../components/YoutubeVideo.vue'
 
 <YoutubeVideo url="https://www.youtube.com/embed/<id>"/>
 ```
-** Local **
+**Local**
 ```md
 <script setup lang="ts">
 import VideoPlayer from '../components/VideoPlayer.vue'

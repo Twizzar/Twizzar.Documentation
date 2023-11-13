@@ -6,6 +6,9 @@ import VideoPlayer from '../components/VideoPlayer.vue'
 import TwizzarExtensionMenu from './images/Twizzar_Extension_Menu.png';
 import TwizzarCreateUnitTest from './images/Twizzar_Create_Unit_Test.png';
 import TwizzarUI from './images/Twizzar_UI.png';
+
+// video source
+import Quickstart from './videos/Quickstart.mp4';
 </script>
 
 # Quickstart
@@ -19,6 +22,8 @@ The Extension should now be available under the Extension Menu:
 <DocImg :src="TwizzarExtensionMenu" alt="Extensions menu"/>
 
 ## Create your first test with TWIZZAR
+
+<VideoPlayer :src="Quickstart" />
 
 ### 1. Create a new Unit Test
 
