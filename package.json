@@ -1,6 +1,6 @@
 {
   "name": "TwizzarDocu",
-  "packageManager": "yarn@4.0.1",
+  "packageManager": "yarn@3.5.1",
   "devDependencies": {
     "glob-run": "^0.1.7",
     "vite": "^4.5.0",
