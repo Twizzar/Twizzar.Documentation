@@ -8,7 +8,7 @@ import type {
 import { Stage, Player } from "@motion-canvas/core";
 import { defineProps, onMounted, ref } from "vue";
 
-const props = defineProps<{ project: Project }>();
+const props = defineProps<{project: string}>();
 
 const stage = new Stage();
 const player = ref<Player>();
@@ -18,11 +18,12 @@ const slides = ref<Slide[] | undefined>(undefined);
 const currentSlide = ref<Slide | null>();
 
 onMounted(() => {
-    const project = props.project;
-    initProject(project);
-    player.value = initPlayer(project);
-    updateSettings();
-    play();
+    loadProject(props.project).then((project) => {
+        if (!project) return;
+        player.value = initPlayer(project);
+        updateSettings();
+        play();
+    });
 });
 
 const initProject = async (project: Project) => {
@@ -32,6 +33,30 @@ const initProject = async (project: Project) => {
     const ro = new ResizeObserver(updateSettings);
     ro.observe(canvasContainer.value!);
     defaultSettings.value = project.meta.getFullRenderingSettings();
+};
+
+const loadProject = async (source: string) => {
+    const canvas = stage.finalBuffer;
+    canvas.classList.add("canvas");
+    canvasContainer.value?.appendChild(canvas);
+    const ro = new ResizeObserver(updateSettings);
+    ro.observe(canvasContainer.value!);
+
+    let project: Project;
+    try {
+        const promise = import(
+            /* webpackIgnore: true */ /* @vite-ignore */ source
+        );
+        const delay = new Promise((resolve) => setTimeout(resolve, 200));
+        await Promise.any([delay, promise]);
+        project = (await promise).default;
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+
+    defaultSettings.value = project.meta.getFullRenderingSettings();
+    return project;
 };
 
 const onRender = async () => {
