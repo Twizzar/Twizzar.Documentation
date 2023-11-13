@@ -6,15 +6,6 @@ export default defineConfig({
     description: "...more than a mocking framework.",
     srcDir: "./src",
     head: [["link", { rel: "icon", href: "/images/TwizzarFav.png" }]],
-    vue:{
-        template: {
-            compilerOptions: {
-                isCustomElement: (tag) => {
-                    return tag == "motion-canvas-player";
-                }
-            }
-        }
-    },
     themeConfig: {
         logo: "/images/TwizzarSquared.png",
         // https://vitepress.dev/reference/default-theme-config

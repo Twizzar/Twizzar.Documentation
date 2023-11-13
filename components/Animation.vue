@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import "@motion-canvas/player";
-import {
-    Stage,
-    Player,
-    type Project,
-    type PlayerSettings,
-    type StageSettings,
-    type Slide,
+import type {
+    Project,
+    PlayerSettings,
+    StageSettings,
+    Slide,
 } from "@motion-canvas/core";
+import { Stage, Player } from "@motion-canvas/core";
 import { defineProps, onMounted, ref } from "vue";
 
 const props = defineProps({

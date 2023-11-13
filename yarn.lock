@@ -444,13 +444,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@motion-canvas/player@npm:^3.11.0":
-  version: 3.11.0
-  resolution: "@motion-canvas/player@npm:3.11.0"
-  checksum: b72dd4985fc9bf7600f35acc198545aab0f7ceaf342a8a88d12363f6323d587384319e46e61671a4c4989a2d4bd97402fb9e8cd9ea7301a9e33579c776a8aef9
-  languageName: node
-  linkType: hard
-
 "@npmcli/agent@npm:^2.0.0":
   version: 2.2.0
   resolution: "@npmcli/agent@npm:2.2.0"
@@ -729,11 +722,11 @@ __metadata:
   resolution: "TwizzarDocu@workspace:."
   dependencies:
     "@motion-canvas/core": "npm:^3.11.0"
-    "@motion-canvas/player": "npm:^3.11.0"
     "@vue/server-renderer": "npm:^3.3.4"
     glob-run: "npm:^0.1.7"
     sass: "npm:^1.69.5"
     typescript: "npm:^5.2.2"
+    vite: "npm:^4.5.0"
     vitepress: "npm:^1.0.0-rc.14"
     vitepress-plugin-auto-sidebar: "npm:^1.1.0"
     vue: "npm:^3.3.4"

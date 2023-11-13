@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.0.1",
   "devDependencies": {
     "glob-run": "^0.1.7",
-    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
     "vitepress": "^1.0.0-rc.14"
   },
   "scripts": {
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@motion-canvas/core": "^3.11.0",
-    "@motion-canvas/player": "^3.11.0",
     "@vue/server-renderer": "^3.3.4",
     "sass": "^1.69.5",
     "vitepress-plugin-auto-sidebar": "^1.1.0",
