@@ -14,7 +14,7 @@ var potion = new BluePotionBuilder()
     .Build(out var context);
 ```
 
-To get a dependency, the <a :href="getUrl">`Get`</a> method of the context can be used.
+To get a dependency, the context's <a :href="getUrl">`Get`</a> method of the context can be used.
 
 ```c#
 var potionColor = context.Get(p => p.Color);
