@@ -6,7 +6,7 @@ import type {
     Slide,
 } from "@motion-canvas/core";
 import { Stage, Player } from "@motion-canvas/core";
-import { defineProps, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 
 const props = defineProps<{project: string}>();
 
