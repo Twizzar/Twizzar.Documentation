@@ -9,15 +9,15 @@ import TwizzarUINonBasicTypes from '../images/Twizzar_UI_Non_Basic_Types.png';
 import TwizzarUIChangeType from '../images/Twizzar_UI_Change_Type.png';
 </script>
 
-# Twizzar UI
+# TWIZZAR UI
 
-For easy configuration, the Twizzar UI can be used. To open it use the arrow behind the ItemBuilder or use the Twizzar open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>).
+For easy configuration, the TWIZZAR UI can be used. To open it use the arrow behind the ItemBuilder or use the TWIZZAR open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>).
 
-<DocImg :src="TwizzarExpandButton " alt="Twizzar expand button, to open the UI"/>
+<DocImg :src="TwizzarExpandButton " alt="TWIZZAR expand button, to open the UI"/>
 
 The Twizzar UI has three columns.
 <DocImg :src="TwizzarUI" alt="Twizzar UI"/>
-The Twizzar UI shows all configurable members in the first column, an input field to configure the members in the second column and the type of the member in the third column. To navigate the UI, use the arrow keys and open or close sub member by the Twizzar open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>). To close the UI press <kbd>ESC</kbd>.
+The TWIZZAR UI shows all configurable members in the first column, an input field to configure the members in the second column and the type of the member in the third column. To navigate the UI, use the arrow keys and open or close sub member by the TWIZZAR open/close shortcut (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>). To close the UI press <kbd>ESC</kbd>.
 
 To configure a [basic type](./basic-types), a value can be entered:
 

@@ -4,11 +4,11 @@ outline: deep
 
 # How to work with generics
 
-With Twizzar, you can easily configure, mock, and verify the behavior of generic methods in your unit tests. This feature allows you to set up method responses for different type parameters, specify delegates for method calls, add callbacks, and perform verifications. This section will guide you through the process of using Twizzar to work with generic methods effectively.
+With TWIZZAR, you can easily configure, mock, and verify the behavior of generic methods in your unit tests. This feature allows you to set up method responses for different type parameters, specify delegates for method calls, add callbacks, and perform verifications. This section will guide you through the process of using TWIZZAR to work with generic methods effectively.
 
 ## Setting Up Generic Methods
 
-You can configure generic methods using Twizzar to return specific values for different type parameters. Here's how it works:
+You can configure generic methods using TWIZZAR to return specific values for different type parameters. Here's how it works:
 
 ```c#
 [Test]
@@ -37,7 +37,7 @@ In this example, the `SimpleGenericMethod<T>()` method is set up to return `5` w
 
 ## Naming of Generic Methods
 
-To differentiate between methods with the same name but different type parameters, Twizzar appends type parameter names to the method name. Here's an example:
+To differentiate between methods with the same name but different type parameters, TWIZZAR appends type parameter names to the method name. Here's an example:
 
 ```c#
 [Test]
@@ -70,7 +70,7 @@ In this case, `MyMethod()` becomes `MyMethod`, `MyMethod<T>` becomes `MyMethodT`
 
 ## Setting Up Value Delegates
 
-Twizzar allows you to assign delegates to generic methods for custom behavior. Here's an example of setting up a delegate for `CreateList<T>()`:
+TWIZZAR allows you to assign delegates to generic methods for custom behavior. Here's an example of setting up a delegate for `CreateList<T>()`:
 
 ```c#
 [Test]
@@ -119,7 +119,7 @@ In this case, a callback is used to add the input parameters of the `CreateList<
 
 ## Verifying Parameter Usage
 
-Twizzar allows you to verify the usage of parameters in generic methods. Here's an example of verifying parameter usage for the `CreateList<T>()` method:
+TWIZZAR allows you to verify the usage of parameters in generic methods. Here's an example of verifying parameter usage for the `CreateList<T>()` method:
 
 ```c#
 [Test]
@@ -136,4 +136,4 @@ public void Verify_parameter()
 }
 ```
 
-The `WhereItemsIs` method now takes not only a predicate but also a type parameter. This addition is essential because Twizzar distinguishes between methods with different type arguments. Meanwhile, the Called(1) method confirms that the `CreateList<T>()` method was invoked once.
+The `WhereItemsIs` method now takes not only a predicate but also a type parameter. This addition is essential because TWIZZAR distinguishes between methods with different type arguments. Meanwhile, the Called(1) method confirms that the `CreateList<T>()` method was invoked once.

@@ -2,6 +2,7 @@
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 
+const itemBuilderUrl = `${fixtureUrl}ItemBuilder-2.html`;
 const itemContextUrl = `${fixtureUrl}IItemContext-2`;
 const memberVerifierUrl = `${fixtureUrl}IMemberVerifier`;
 
@@ -15,7 +16,7 @@ const getUrl = `${fixtureUrl}IPropertyVerifier-1/Get`;
 const setUrl = `${fixtureUrl}IPropertyVerifier-1/Set`;
 </script>
 
-# How to verify Method and Properties
+# How to verify methods and properties
 Consider the following service:
 
 ```c#
@@ -34,7 +35,7 @@ public class Consumer{
 
 When we now want to validate if the `Apply` method of the `IEffect` interface is called, we need access to the effect object.
 
-To validate that the `Apply` method is called, the <a :href="itemContextUrl">`ItemContext`</a> can be used. The context can be used to get dependencies which are resolved and set by the ItemBuilder. But also for validating if a method or property was called. To validate if a method was called the <a :href="verifyMethodUrl">`Verify`</a> method can be used.
+To validate that the `Apply` method is called, the <a :href="itemContextUrl">`ItemContext`</a> can be used. The context can be used to get dependencies which are resolved and set by the <a :href="itemBuilderUrl">`ItemBuilder`</a>. But also for validating if a method or property was called. To validate if a method was called the <a :href="verifyMethodUrl">`Verify`</a> method can be used.
 
 ```c#{9-10}
 var consumer = new MyConsumerBuilder()
@@ -55,7 +56,7 @@ The context can only be retrieved form a [Custom Item Builder](../key-concepts/i
 
 ## Parameter verification
 
-It is also possible to validate if a method is called with the right parameter. For this, Twizzar provides methods which get automatically generated.
+It is also possible to validate if a method is called with the right parameter. For this, TWIZZAR provides methods which get automatically generated.
 
 ```c#
 public interface IStorage
@@ -74,14 +75,14 @@ context.Verify(p => p.Take)
     .Called(1);
 ```
 
-It is also possible to use a predicate to check for parameters here we check if the `IStorage.Store` method was called and the `ingredient` provided has the Name `"Mushroom"`.
+It is also possible to use a predicate to check for parameters. Here we check if the `IStorage.Store` method was called and the `ingredient` provided has the Name `"Mushroom"`.
 
 ```c#{2}
 context.Verify(p => p.Store)
     .WhereIngredientIs(ingredient => ingredient.Name == "Mushroom")
     .Called(1);
 ```
-If we setup the IStorage.Take method to return an specific ingredient, and the want to check if IStorage.Store is called and the set up ingredient was provided as parameter we could do the following:
+If we set up the `IStorage.Take` method to return a specific ingredient and want to check if `IStorage.Store` is called and the set-up ingredient is provided as a parameter, we could do the following:
 
 ```c#{2}
 var ingredient = context.Get(p => p.Take);
@@ -90,7 +91,7 @@ context.Verify(p => p.Store)
     .Called(1);
 ```
 
-But Twizzar also provides a Verify which can handle this in one statement.
+But TWIZZAR also provides a `Verify` method which can handle this in one statement.
 ```c#{2}
 context.Verify(p => p.Store)
     .WhereIngredientIs(p => p.Take)

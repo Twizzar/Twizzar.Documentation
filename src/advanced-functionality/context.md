@@ -2,7 +2,7 @@
 
 const fixtureUrl = "../api/Twizzar.Fixture/";
 const itemContextUrl = `${fixtureUrl}IItemContext-2`;
-const buildContextUrl = `${fixtureUrl}IItemBuilder-2/Build`;
+const buildContextUrl = `${fixtureUrl}ItemBuilder-2/Build`;
 const getUrl = `${fixtureUrl}IItemContext-2/Get`;
 </script>
 
@@ -14,7 +14,7 @@ var potion = new BluePotionBuilder()
     .Build(out var context);
 ```
 
-To get a dependency, the <a :href="getUrl">`Get`</a> method of the context can be used.
+To get a dependency, the context's <a :href="getUrl">`Get`</a> method of the context can be used.
 
 ```c#
 var potionColor = context.Get(p => p.Color);

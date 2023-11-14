@@ -6,14 +6,14 @@ import TwizzarCodeEditorUnitTestGeneration from '../images/Twizzar_CodeEditor_Un
 </script>
 
 # Test creation
-Twizzar offers a comprehensive set of features and configurations to automate and customize unit test creation:
+TWIZZAR offers a comprehensive set of features and configurations to automate and customize unit test creation:
 
-Twizzar automatically generates unit tests for the current code member using shortcuts or the context menu. It creates projects, test classes, and test methods based on predefined mappings and templates.
+TWIZZAR automatically generates unit tests for the current code member using shortcuts or the context menu. It creates projects, test classes, and test methods based on predefined mappings and templates.
 
-Twizzar simplifies the unit testing process in Visual Studio, enhancing productivity by automating much of the test creation and allowing for extensive customization through configuration files and templates. It's a valuable tool for C# developers looking to efficiently create and manage unit tests.
+TWIZZAR simplifies the unit testing process in Visual Studio, enhancing productivity by automating much of the test creation and allowing for extensive customization through configuration files and templates. It's a valuable tool for C# developers looking to efficiently create and manage unit tests.
 
 ## Unit test generation
-Twizzar automatically creates a unit test for the current member, by either using the Shortcut (<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>, <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>) or context menu:
+TWIZZAR automatically creates a unit test for the current member, by either using the Shortcut (<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>, <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>) or context menu:
 
 <DocImg :src="TwizzarCodeEditorUnitTestGeneration" alt="Create Unit Test"/>
 
@@ -21,8 +21,8 @@ Based on the [mapping](#mapping) and [template](#templating) a new project, a te
 
 
 ## Configuration
-The Twizzar configuration is used for unit test generation and navigation, and therefore it is separated into two files.
-One containing the templates used for controlling the code created, the other is used for defining the destination where the generated tests are located. The configuration files are automatically generated if they don't exist in the moment of test creation. They are located at the same level as the Visual Studio solution file and have to be manually added to the source control.
+The TWIZZAR configuration is used for unit test generation and navigation, and therefore it is separated into two files.
+One contains the templates used for controlling the code created, the other is used for defining the destination where the generated tests are located. The configuration files are automatically generated if they don't exist in the moment of test creation. They are located at the same level as the Visual Studio solution file and have to be manually added to the source control.
 
 - [Mapping](#mapping)
 - [Templating](#templating)
@@ -37,7 +37,7 @@ The mapping configurations define how MUTs are associated with their correspondi
 #### Usage Notes
 
 - All paths within this configuration file use forward slashes (`/`) as the directory separator.
-- Variables enclosed in `$` symbols will be automatically populated by the Addin based on the context.
+- Variables enclosed in `$` symbols will be automatically populated by the Add-in based on the context.
 - A mapping can have multiple pattern matches, separated by a newline, but the first match encountered will be used.
 - The syntax for a mapping is as follows: `<pattern> : <replacement>`
   - The pattern can contain wildcards (`*`), which correspond to any number of characters (greedy matching).
@@ -139,10 +139,10 @@ The file _(twizzar.template)_ serves as a template for generating the content of
 - When `<MyTag>` is used in a code snippet, it will be replaced with the code written under the `[MyTag:]` section.
 - Some tags are dynamic and will be replaced by another tag depending on the context:
 
-  - if a dynamic tag isn't defined, an internal default value is used
+  - If a dynamic tag isn't defined, an internal default value is used
   - `<arrange>` will be replaced by:
     - `<sut-arrange>` if the type under test is non-static.
-    - nothing if the type under test is static.
+    - Nothing if the type under test is static.
   - `<arguments-arrange>` will be replaced by:
 
     - `<method-arguments-arrange>` if the member under test is a method.
