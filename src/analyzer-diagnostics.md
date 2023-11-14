@@ -6,11 +6,11 @@
 
 ### Cause
 
-An unexpected occurred in he Twizzar analyzer, this most likely happens when a state is reached that was not expected.
+An unexpected occurred in he TWIZZAR analyzer, this most likely happens when a state is reached that was not expected.
 
 ### How to fix the warning
 
-This is most likely a Bug, if Twizzar does not work as expected, please make a Bug report under: [https://github.com/Twizzar/Twizzar/issues](https://github.com/Twizzar/Twizzar/issues)
+This is most likely a Bug, if TWIZZAR does not work as expected, please make a Bug report under: [https://github.com/Twizzar/Twizzar/issues](https://github.com/Twizzar/Twizzar/issues)
 
 ## TZ0002
 
@@ -18,7 +18,7 @@ This is most likely a Bug, if Twizzar does not work as expected, please make a B
 
 ### Cause
 
-When a private or protected member is used in the `ItemBuilder` this warning will be shown by the Twizzar analyzer.
+When a private or protected member is used in the `ItemBuilder` this warning will be shown by the TWIZZAR analyzer.
 
 ### How to fix the warning
 

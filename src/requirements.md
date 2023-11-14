@@ -1,8 +1,8 @@
 # Requirements
-To use Twizzar, you need to meet the following requirements:
+To use TWIZZAR, you need to meet the following requirements:
 
-- Visual Studio 2022 for Windows
-- **Any .Net Version** compatible with **.Net Standard 2.0** (see compatibility list)
+- Visual Studio 2022 for Windows (Community, Professional or Enterprise)
+- **Any .NET Version** compatible with **.NET Standard 2.0** (see compatibility list)
 
 ::: info .NET Standard 2.0 compatibility list
 See also [https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0)
