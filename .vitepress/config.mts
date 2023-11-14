@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "Twizzar documentation",
+    title: "TWIZZAR documentation",
     description: "...more than a mocking framework.",
     srcDir: "./src",
     head: [["link", { rel: "icon", href: "/images/TwizzarFav.png" }]],
@@ -35,7 +35,7 @@ export default defineConfig({
                                 link: "/key-concepts/item-builder",
                             },
                             {
-                                text: "Twizzar UI",
+                                text: "TWIZZAR UI",
                                 link: "/key-concepts/twizzar-ui",
                             },
                             {
@@ -52,7 +52,7 @@ export default defineConfig({
                         text: "How to...",
                         items: [
                             {
-                                text: "add Twizzar to an existing project",
+                                text: "add TWIZZAR to an existing project",
                                 link: "/advanced-functionality/add-twizzar-to-an-existing-project",
                             },
                             {

@@ -1,12 +1,12 @@
-# Twizzar Documentation
+# TWIZZAR Documentation
 
-- [Twizzar Documentation](#twizzar-documentation)
+- [TWIZZAR Documentation](#twizzar-documentation)
   - [Requirements](#requirements)
   - [Get started](#get-started)
   - [VitePress](#vitepress)
   - [Mermaid diagrams](#mermaid-diagrams)
   - [Api documentation](#api-documentation)
-  - [How do I change the left side bar?](#how-do-i-change-the-left-side-bar)
+  - [How do I change the left sidebar?](#how-do-i-change-the-left-sidebar)
   - [Where do I put the images?](#where-do-i-put-the-images)
   - [How do I add a video?](#how-do-i-add-a-video)
 
@@ -43,11 +43,11 @@ The diagrams need to be in the `src/mermaid` directory and need to have the `.mm
 ## Api documentation
 To generate the markdown files for the api documentation:
 1. install https://ejball.com/XmlDocMarkdown
-2. nagiavate to the project bin folder where the dll is located
-3. run `xmldocmd .\Twizzar.Api.dll docs --visibility public`
+2. navigate to the project bin folder where the dll is located
+3. run `xmldocmd .\TWIZZAR.Api.dll docs --visibility public`
 4. put the generated markdown files in the `src/api` folder
 
-## How do I change the left side bar?
+## How do I change the left sidebar?
 Open the file `.vitepress/config.Mts` and change the `themeConfig.sidebar` property.
 
 ## Where do I put the images?
@@ -67,7 +67,7 @@ The `DocImg` is a component which is used to display the images. It is located i
 Images used for the theme should be places under `src/public/images` all files in the public folder will be copied to the root of the build folder.
 
 ## How do I add a video?
-**Youtube**
+**YouTube**
 ```md
 <script setup lang="ts">
 import YoutubeVideo from '../components/YoutubeVideo.vue'
