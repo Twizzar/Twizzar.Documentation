@@ -9,6 +9,8 @@
 
     --kdb-border-color: var(--vp-c-bg);
     --kdb-bg-color: var(--vp-c-bg-soft);
+
+    --vp-sidebar-width: 280px;
 }
 
 kbd {
@@ -20,4 +22,8 @@ kbd {
     vertical-align: middle;
     display: inline-block;
     box-shadow: inset 0 -1px 0 var(--vp-c-border);
+}
+
+.VPSidebar {
+    padding-bottom: 10px !important;
 }
