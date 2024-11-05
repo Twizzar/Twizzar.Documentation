@@ -180,7 +180,8 @@ export default defineConfig({
             provider: "local",
         },
         sitemap: {
-            hostname: "https://docs.twizzar.com",
+            // hostname: "https://docs.twizzar.com",
+            hostname: " https://twizzar.github.io/Twizzar.Documentation/",
         },
     },
 });
