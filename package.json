@@ -10,7 +10,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "build:azure": "vitepress build",
+    "build:pages": "vitepress build",
     "mermaid": "glob-run mmdc -i src/mermaid/\\*.mmd -o src/images/\\*.svg"
   },
   "dependencies": {
