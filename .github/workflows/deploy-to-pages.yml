@@ -43,7 +43,6 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            .vitepress
             .yarn
           key: ${{ runner.os }}-vue-build-${{ hashFiles('dist') }}
           restore-keys: |
