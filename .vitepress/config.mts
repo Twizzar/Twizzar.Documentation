@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: '/Twizzar.Documentation/',
     title: "TWIZZAR documentation",
     description: "...more than a mocking framework.",
     srcDir: "./src",
