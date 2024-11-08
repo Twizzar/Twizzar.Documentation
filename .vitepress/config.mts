@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: '/Twizzar.Documentation/',
+    base: '/',
     title: "TWIZZAR documentation",
     description: "...more than a mocking framework.",
     srcDir: "./src",
@@ -181,8 +181,7 @@ export default defineConfig({
             provider: "local",
         },
         sitemap: {
-            // hostname: "https://docs.twizzar.com",
-            hostname: " https://twizzar.github.io/Twizzar.Documentation/",
+            hostname: "https://docs.twizzar.com",
         },
     },
 });
