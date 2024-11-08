@@ -72,7 +72,7 @@ Potion
 
 It can be selected over the path class by selecting the right path `p.Ingredient1.Name`. Or also over the constructor: `p.Ctor.ingredient1.Name`.
 
-When we look at the [Potion](https://github.com/Twizzar/Twizzar/blob/main/examples/PotionDeliveryService/PotionDeliveryService/Potions.cs), it requires four additional parameters to be created.
+When we look at the [Potion](https://github.com/Twizzar/Twizzar.Examples/blob/main/examples/PotionDeliveryService/PotionDeliveryService/Potions.cs), it requires four additional parameters to be created.
 
 ```c#
 public class Potion

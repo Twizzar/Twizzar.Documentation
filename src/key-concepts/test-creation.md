@@ -126,9 +126,9 @@ NUnit3TestAdapter
 
 Example templates are located in the example source:
 
-- [nunit](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/NUnit/twizzar.config)
-- [xunit](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/XUnit/twizzar.config)
-- [mstest](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/MSTest/twizzar.config)
+- [nunit](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/NUnit/twizzar.config)
+- [xunit](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/XUnit/twizzar.config)
+- [mstest](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/MSTest/twizzar.config)
 
 ## Templating
 The file _(twizzar.template)_ serves as a template for generating the content of a unit test. It contains placeholders and code snippets that can be customized to create comprehensive unit tests.
@@ -172,6 +172,6 @@ This code template is designed to help you create unit tests in C# using Twizzar
 
 Example templates are located in the example source:
 
-- [nunit](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/NUnit/twizzar.template)
-- [xunit](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/XUnit/twizzar.template)
-- [mstest](https://github.com/Twizzar/Twizzar/blob/main/defaultConfigs/MSTest/twizzar.template)
+- [nunit](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/NUnit/twizzar.template)
+- [xunit](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/XUnit/twizzar.template)
+- [mstest](https://github.com/Twizzar/Twizzar.Examples/blob/main/defaultConfigs/MSTest/twizzar.template)

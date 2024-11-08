@@ -8,12 +8,12 @@ import TwizzarSetShortcuts from './images/Twizzar_Set_Shortcuts.png';
 
 # Key bindings
 
-| Command                           | Description                                             |                                         Key binding                                          |
-| --------------------------------- | ------------------------------------------------------- | :------------------------------------------------------------------------------------------: |
-| About                             | Opens the about dialog                                  | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd> |
-| Create UnitTest (New)             | Creates a new unit test for the member under the cursor | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd> |
+| Command                         | Description                                             |                                         Key binding                                          |
+| ------------------------------- | ------------------------------------------------------- | :------------------------------------------------------------------------------------------: |
+| About                           | Opens the about dialog                                  | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd> |
+| Create UnitTest (New)           | Creates a new unit test for the member under the cursor | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd> |
 | UnitTest ↔ Code Navigation (Go) | Jumps either to the unit test or the member definition  | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>G</kbd> |
-| Open or close                     | Open or close the TWIZZAR UI                            | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>V</kbd> |
+| Open or close                   | Open or close the TWIZZAR UI                            | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>N</kbd>,<br> <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>V</kbd> |
 
 ## Reset shortcuts
 

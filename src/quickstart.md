@@ -129,4 +129,4 @@ The test can now be run with the standard Visual Studio test runner or any other
 
 ## Examples
 
-An example project can be found under [examples/PotionDeliveryService](https://github.com/Twizzar/Twizzar/tree/main/examples/PotionDeliveryService), this is a good starting point to get familiar with TWIZZAR.
+An example project can be found under [examples/PotionDeliveryService](https://github.com/Twizzar/Twizzar.Examples/tree/main/examples/PotionDeliveryService), this is a good starting point to get familiar with TWIZZAR.
